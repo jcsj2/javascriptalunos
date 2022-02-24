@@ -27,17 +27,17 @@ class Client {
 
 const jose = new Client('Jose', 'Silva', 'jose@email.com', '8181818');
 
-console.log(jose)
-console.log(jose.email)
+// console.log(jose)
+// console.log(jose.email)
 
 jose.email = 'novoemail@email.com'
 
-console.log(jose.email)
-console.log(jose.getFullName())
+// console.log(jose.email)
+// console.log(jose.getFullName())
 
 const maria = Client.buildSimpleClient('Maria', '3343455');
 
-console.log(maria)
+// console.log(maria)
 
 /*
 function soma(a, b) {
@@ -53,4 +53,36 @@ function construirNovoCliente(firstName, lastName) {
 
 const joao = construirNovoCliente('Joao', 'Silva')
 
-console.log(joao)
+// console.log(joao)
+
+class Animal {
+
+    constructor(nome, barulho) {
+        this.nome = nome;
+        this.barulho = barulho;
+    }
+
+    fazerBarulho() {
+        return `${this.nome} faz ${this.barulho}`
+    }
+}
+
+class Doguinho extends Animal {
+
+    constructor(nome) {
+        super(nome, 'Auuuuuuuuu!')
+    }
+}
+
+class Gatinho extends Animal {
+
+    constructor(nome) {
+        super(nome, 'Miauuuuuuu!')
+    }
+}
+
+const frajola = new Gatinho('Frajola')
+console.log(frajola.fazerBarulho())
+
+const pluto = new Doguinho('Pluto')
+console.log(pluto.fazerBarulho())
