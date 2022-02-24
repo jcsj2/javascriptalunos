@@ -8,6 +8,12 @@ async function search (packageName, version) {
 
     try {
 
+        // pra ver se existe elementos filhos a esse
+        // if ($(this).find('.blablabla').length)
+
+        // como pegar atributos como href e src
+        // $(this).find('.linkOuInput').attr('href')
+
         const { data } = await axios(url)
         const html = data
         const $ = cheerio.load(html)
