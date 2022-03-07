@@ -1,0 +1,32 @@
+GET http://localhost:3000/games
+
+###
+
+POST http://localhost:3000/games HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Super Mario World",
+    "videoGame": "Super Nintendo",
+    "year": 1990
+}
+
+###
+
+GET http://localhost:3000/games/1
+
+
+###
+
+DELETE http://localhost:3000/games/1
+
+###
+
+PUT http://localhost:3000/games/1 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Sonic",
+    "videoGame": "Mega Drive",
+    "year": 1990
+}
