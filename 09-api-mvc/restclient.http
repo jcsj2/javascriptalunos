@@ -1,0 +1,39 @@
+###
+GET http://localhost:3333/health
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJuYW1lT2ZVc2VyIjoic2FtcGxlIiwiaWF0IjoxNjQ2Nzg0NTQwLCJleHAiOjE2NDY4MDI1NDB9.zbwfaxGB-Z3cS4SsJr69LDEdi4rOSBY8rn-0dHgozCs
+
+###
+POST http://localhost:3333/users/signup HTTP/1.1
+content-type: application/json
+
+{
+    "name": "sample",
+    "birthday": "1991-09-24 03:00:00",
+    "email": "sampalaaeaaaaaaa@email.com",
+    "personalDocument": "01425312591",
+    "password": "123456"
+}
+
+###
+POST http://localhost:3333/users/signin HTTP/1.1
+content-type: application/json
+
+{
+    "email": "sampalaaeaaaaaaa@email.com",
+    "password": "123456"
+}
+
+### Movies new
+POST http://localhost:3333/movies/new HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJuYW1lT2ZVc2VyIjoic2FtcGxlIiwiaWF0IjoxNjQ2Nzg0OTY5LCJleHAiOjE2NDY4MDI5Njl9.5coFbjGkYnjEKyLtC2eryaY7mfXJLueTXwJeuz-SfEw
+
+{
+    "title": "Scott Pilgrin",
+    "price": 10.99,
+    "quantity": 5,
+    "categoryId": 3
+}
+
+###
+GET http://localhost:3333/movies/search?categoryId=3&titleContains=missao
